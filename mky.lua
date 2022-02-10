@@ -1,6 +1,4 @@
-loadstring(game:HttpGet("https://pastebin.com/raw/K3bYZJV3"))()
 
-wait()
 
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolimluke/silent2/main/stefanuk"))()
 Aiming.TeamCheck(false)
